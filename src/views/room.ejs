@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/room.css">
+    <link rel="stylesheet" href="./CSS/modal.css">
+
+    <title>Perguntas e Resposta</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+        <!-- S C R I P T -->
+        <script src="scripts/main.js" defer type="module"></script>
+</head>
+
+<body>
+
+    <section id="room" class="content">
+        <header>
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./images/Logo.svg" alt="Logo" />
+                </a>
+            </div>
+            <div class="buttons">
+
+                <div class="button outlined" id="room-id" data-id="323243">
+                    #323243
+                    <img src="./images/square.svg" alt="copiar número da sala" />
+                </div>
+
+                <a href="#" class="button">
+                    <img src="./images/users2.svg" alt="criar uma sala">
+                    Criar Sala
+                </a>
+
+            </div>
+        </header><!--  Header end   -->
+
+        <main>
+            <section id="question-form">
+                <h2>Faça sua pergunta</h2>
+
+                <form action="">
+                    <label for="question" class="sr-only"> O que você perguntar? </label>
+                    <textarea name="question" id="question" placeholder="O que você quer perguntar?"></textarea>
+
+                    <footer>
+                        <div>
+                            <img src="./images/lock_black.svg" alt="Cadeado">
+                            Esta perunta é anônima
+                        </div>
+                        <button>Enviar</button>
+                    </footer>
+
+                </form>
+
+            </section> <!--  section form end   -->
+
+            <section id="questions">
+                <h2 class="sr-only">Perguntas da comunidade</h2>
+                <div class="questions">
+
+                    <div class="question-wrapper">
+                        <div class="question-content">
+                            <div class="user">
+                               <img src="./images/user-cicle-cinza.svg" alt="Icones">
+                            </div>
+                            <div class="question">
+                                <p>Qual a diferença entre const, var e let no Javascriopt ?</p>
+                            </div>
+                        </div>
+                        <section class="action" data-id="2">
+                            <a href="#" class="check">
+                                <img src="./images/check.svg" alt="Checked ">
+                                Marcar como lida
+                            </a>
+                            <a href="#" class="delete" data-id="2">
+                                <img src="./images/trash.svg" alt="Exluir">
+                                Excluir
+                            </a>
+                        </section>
+                    </div>
+
+                    <div class="question-wrapper ">
+                        <div class="question-content">
+                            <div class="user">
+                               <img src="./images/user-cicle-cinza.svg" alt="">
+                            </div>
+                            <div class="question">
+                                <p>O que é typescript ?</p>
+                            </div>
+                        </div>
+                        <section class="action" >
+                            <a href="#" class="check" data-id="3">
+                                <img src="./images/check.svg" alt="Checked ">
+                                Marcar como lida
+                            </a>
+                            <a href="#" class="delete" data-id="3">
+                                <img src="./images/trash.svg" alt="Exluir">
+                                Excluir
+                            </a>
+                        </section>
+                    </div>
+
+                    <div class="question-wrapper">
+                        <div class="question-content">
+                            <div class="user">
+                               <img src="./images/user-cicle-cinza.svg" alt="">
+                            </div>
+                            <div class="question">
+                                <p>Você já sabe quais você precisa melhorar para alcançar
+                                   o seu próximo nível como maestria? Definiu o seu foco 
+                                   e objetivo para seguir em frente? Estou curiosa e embasbacada 
+                                   com sua preseverança por ter alcaçado a terceira aula e sei 
+                                   que você vai continuar até o fim, então respode ai pra jente!! 
+                                </p>
+                            </div>
+                        </div>
+                        <section class="action">
+                            <a href="#" class="check" data-id="4">
+                                <img src="./images/check.svg" alt="Checked ">
+                                Marcar como lida
+                            </a>
+                            <a href="#" class="delete" data-id="4">
+                                <img src="./images/trash.svg" alt="Exluir">
+                                Excluir
+                            </a>
+                        </section>
+                    </div>
+
+                    <div class="question-wrapper read">
+                        <div class="question-content">
+                            <div class="user">
+                               <img src="./images/user-cicle-cinza.svg" alt="">
+                            </div>
+                            <div class="question">
+                                <p>Qual a diferença entre const, var e let no Javascriopt ?</p>
+                            </div>
+                        </div>
+                        <section class="action">
+                            
+                            <a href="#" class="delete" data-id="1">
+                                <img src="./images/trash.svg" alt="Exluir">
+                                Excluir
+                            </a>
+                        </section>
+                    </div>
+
+                </div> <!-- Question end -->
+
+            </section> <!-- questions end  -->
+
+    <!--------------  M O D A L ------------------>
+
+            <div class="modal-wrapper ">
+                <div class="modal">
+                    <h2> Excluir pergunta</h2>
+                    <p>Tem certeza que você deseja excliur esta pergunta? </p>
+
+                    <form action="">
+                        <label class="sr-only" for="password">Digite sua senha admin</label>
+                        <input type="password" name="password" id="password" placeholder="Digite seua Senha Admin">
+
+                        <div class="buttons">
+                            <div class="button grey cancel">Cancelar</div>
+                            <button class="red">Sim. Excluir</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+    </section>
+
+</body>
+
+</html>
