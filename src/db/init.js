@@ -1,6 +1,6 @@
-import Database from './config';
+const Database = require ('./config');
 
-const iniDb = {
+const initDb = {
     async init() {
         const db = await Database()
 
@@ -18,7 +18,8 @@ const iniDb = {
                 read INT
             )
         `);
-                await db.close()
+        
+        await db.close()
     }
 }
 
